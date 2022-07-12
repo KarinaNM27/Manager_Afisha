@@ -2,52 +2,26 @@
 package ru.netology.manager;
 
 public class Manager_Afisha {
-    private Movies[] movies = new Movies[0];
-    private int limit;
 
-    public void add(Movies movie) {
-        int length = movies.length + 1;
-        Movies[] tmp = new Movies[length];
-        System.arraycopy(movies, 0, tmp, 0, movies.length);
-        int lastIndex = tmp.length - 1;
-        tmp[lastIndex] = movie;
-        movies = tmp;
+private RepositoryAfisha repository;
+public Manager_Afisha(RepositoryAfisha repository) { this.repository=repository; }
+    public void add(Movies movie) { repository.save(movie); }
 
+
+    public void findAll1(){repository.findAll();
 
     }
 
-    public Manager_Afisha() {
-        limit = 10;
+    public void removeById1(int id){repository.removeById(id);}
 
-    }
+    public int findById1(int id){repository.findById(id);
 
-    public Manager_Afisha(int limit) {
-        this.limit = limit;
-
+        return id;
     }
 
 
-    public Movies[] findAll() {
-        return movies;
-    }
+    public void removeAll1(int id){repository.removeAll( id);}
 
 
-    public Movies[] findLast() {
 
-        int resultLength;
-
-        if (limit < movies.length) {
-            resultLength = limit;
-        } else {
-            resultLength = movies.length;
-        }
-        Movies[] result = new Movies[resultLength];
-        for (int i = 0; i < resultLength; i++) {
-            int index = movies.length - i - 1;
-            result[i] = movies[index];
-            // заполняем result из массива что лежит в поле
-            // в обратном порядке
-        }
-        return result;
-    }
 }
