@@ -5,29 +5,29 @@ import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.verify;
 
 
-public class Manager_AfishaTest {
-//    @Mock
+public class ManagerAfishaTest {
+    //    @Mock
     private RepositoryAfisha repository = Mockito.mock(RepositoryAfisha.class);
 
-//    @InjectMocks
-    private Manager_Afisha manager = new Manager_Afisha(repository);
+    //    @InjectMocks
+    private ManagerAfisha manager = new ManagerAfisha(repository);
     private Movies first = new Movies(111, "Бладшот", "боевик");
     private Movies second = new Movies(222, "Вперед", "мультфильм");
     private Movies third = new Movies(333, "Отель Белград", "комедия");
     private Movies fourth = new Movies(444, "Джентльмены", "боевик");
     private Movies fifth = new Movies(555, "Человек-невидимка", "ужасы");
-    private   Movies sixth = new Movies(666, "Тролли.Мировой тур", "мультфильм");
+    private Movies sixth = new Movies(666, "Тролли.Мировой тур", "мультфильм");
     private Movies seventh = new Movies(777, "Номер один", "комедия");
 
 
-
     @Test
-    public void shouldfindById() {
+    public void shouldFindById() {
         Movies[] returned = {first, second, third, fourth, fifth, sixth, seventh};
         doReturn(returned).when(repository).findAll();
         int expected3 = 333;
@@ -47,7 +47,7 @@ public class Manager_AfishaTest {
 //        Movies[] expected1 = new Movies[]{first, second, third, fourth, fifth, sixth, seventh};
 
         assertEquals(expected3, actual3);
-       verify(repository).findById(333);
+        verify(repository).findById(333);
 
     }
 }

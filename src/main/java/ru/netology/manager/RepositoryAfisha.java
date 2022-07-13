@@ -20,15 +20,13 @@ public class RepositoryAfisha {
     }
 
 
-
-
-    public void removeById(int id){
-        int length=movies.length - 1;
+    public void removeById(int id) {
+        int length = movies.length - 1;
         Movies[] tmp = new Movies[length];
         int index = 0;
-        for (Movies movie: movies) {
-            if (movie.getId()!=id){
-                tmp[index]=movie;
+        for (Movies movie : movies) {
+            if (movie.getId() != id) {
+                tmp[index] = movie;
                 index++;
             }
 
@@ -36,12 +34,12 @@ public class RepositoryAfisha {
         movies = tmp;
     }
 
-    public Movies findById(int id){
+    public Movies findById(int id) {
 
         Movies[] movieById = new Movies[0];
         int idd = 0;
-        for (Movies movie: movies) {
-            if (movie.getId() == idd){
+        for (Movies movie : movies) {
+            if (movie.getId() == idd) {
                 movieById[idd] = movie;
                 idd++;
             }
