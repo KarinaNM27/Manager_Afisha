@@ -1,7 +1,7 @@
 
 package ru.netology.manager;
 
-public class Manager_Afisha {
+public class ManagerAfisha {
     private Movies[] movies = new Movies[0];
     private int limit;
 
@@ -16,12 +16,12 @@ public class Manager_Afisha {
 
     }
 
-    public Manager_Afisha() {
+    public ManagerAfisha() {
         limit = 10;
 
     }
 
-    public Manager_Afisha(int limit) {
+    public ManagerAfisha(int limit) {
         this.limit = limit;
 
     }

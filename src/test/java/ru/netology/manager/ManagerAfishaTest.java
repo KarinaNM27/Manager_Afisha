@@ -3,10 +3,8 @@ package ru.netology.manager;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
 
-
-public class Manager_AfishaTest {
+public class ManagerAfishaTest {
     Movies first = new Movies(111, "Бладшот", "боевик");
     Movies second = new Movies(222, "Вперед", "мультфильм");
     Movies third = new Movies(333, "Отель Белград", "комедия");
@@ -18,7 +16,7 @@ public class Manager_AfishaTest {
 
     @Test
     public void findAllTest() {
-        Manager_Afisha manager = new Manager_Afisha();
+        ManagerAfisha manager = new ManagerAfisha();
         manager.add(first);
         manager.add(second);
         manager.add(third);
@@ -37,7 +35,7 @@ public class Manager_AfishaTest {
 
     @Test
     public void findLastTest() {
-        Manager_Afisha manager = new Manager_Afisha();
+        ManagerAfisha manager = new ManagerAfisha();
         manager.add(first);
         manager.add(second);
         manager.add(third);
