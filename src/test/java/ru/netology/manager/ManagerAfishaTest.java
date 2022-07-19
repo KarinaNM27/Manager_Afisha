@@ -27,7 +27,7 @@ public class ManagerAfishaTest {
 
 
     @Test
-    public void shouldfindById() {
+    public void shouldFindById() {
         Movies[] returned = {first, second, third, fourth, fifth, sixth, seventh};
         doReturn(returned).when(repository).findAll();
         int expected3 = 333;
