@@ -33,18 +33,6 @@ public class ManagerAfishaTest {
         int expected3 = 333;
         int actual3 = manager.findById1(333);
 
-//        Manager_Afisha manager = new Manager_Afisha();
-//        manager.add(first);
-//        manager.add(second);
-//        manager.add(third);
-//        manager.add(fourth);
-//        manager.add(fifth);
-//        manager.add(sixth);
-//        manager.add(seventh);
-
-
-//        Movies[] actual1 = manager.findAll();
-//        Movies[] expected1 = new Movies[]{first, second, third, fourth, fifth, sixth, seventh};
 
         assertEquals(expected3, actual3);
         verify(repository).findById(333);
