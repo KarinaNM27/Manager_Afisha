@@ -12,10 +12,9 @@ import static org.mockito.Mockito.verify;
 
 
 public class ManagerAfishaTest {
-    //    @Mock
+
     private RepositoryAfisha repository = Mockito.mock(RepositoryAfisha.class);
 
-    //    @InjectMocks
     private ManagerAfisha manager = new ManagerAfisha(repository);
     private Movies first = new Movies(111, "Бладшот", "боевик");
     private Movies second = new Movies(222, "Вперед", "мультфильм");
